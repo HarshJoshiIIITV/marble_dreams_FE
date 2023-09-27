@@ -43,8 +43,7 @@ export default function AdminProductDetail() {
       if (selectedSize) {
         newItem.size = selectedSize;
       }
-      dispatch(addToCartAsync(newItem));
-      alert.success('Item added to Cart');
+      dispatch(addToCartAsync({item:newItem, alert}));
     } else {
       alert.error('Item Already added');
     }
